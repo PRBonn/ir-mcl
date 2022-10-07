@@ -4,8 +4,10 @@ This repo contains the code of the paper:
 
 by [Haofei Kuang](https://www.ipb.uni-bonn.de/people/haofei-kuang/), [Xieyuanli Chen](https://www.ipb.uni-bonn.de/people/xieyuanli-chen/), [Tiziano Guadagnino](https://phd.uniroma1.it/web/TIZIANO-GUADAGNINO_nP1536210_IT.aspx), [Nicky Zimmerman](https://www.ipb.uni-bonn.de/people/nicky-zimmerman/), [Jens Behley](https://www.ipb.uni-bonn.de/people/jens-behley/) and [Cyrill Stachniss](https://www.ipb.uni-bonn.de/people/cyrill-stachniss/)
 
+[Arxiv Preprint](https://arxiv.org/abs/2210.03113)
+
 ----
-### IR-MCL pipeline.
+### IR-MCL pipeline
 <p align="center">
 <img src="https://user-images.githubusercontent.com/18661888/194111809-4f966ab5-64be-45fc-963b-a6fe0a8c14ed.png" width="700"/>
 </p>
