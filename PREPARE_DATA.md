@@ -1,7 +1,7 @@
 ## IPBLab dataset
 Downloading IPBLab dataset from our server:
 ```shell
-cd ir-mcl && mkdir data
+cd ir-mcl && mkdir data && cd data
 wget https://www.ipb.uni-bonn.de/html/projects/kuang2023ral/ipblab.zip
 unzip ipblab.zip
 ```
@@ -35,7 +35,7 @@ There is one sequence available for the localization experiments now, the full d
 ## Intel Lab datatse, Freiburg Building 079 dataset, and MIT CSAIL dataset
 Downloading these three classical indoor 2D SLAM datasets from our server:
 ```shell
-cd ir-mcl && mkdir data
+cd ir-mcl && mkdir data && cd data
 wget https://www.ipb.uni-bonn.de/html/projects/kuang2023ral/2dslam.zip
 unzip 2dslam.zip
 ```

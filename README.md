@@ -57,7 +57,7 @@ The code was tested with Ubuntu 20.04 with:
   
   conda install -c conda-forge pybind11
   pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116
-  pip install pytorch-lightning
+  pip install pytorch-lightning tensorboardX
   pip install matplotlib scipy open3d
   pip install evo --upgrade --no-binary evo
   ```
@@ -117,21 +117,21 @@ Due to the space limitation of the paper, we provide some experimental results a
 ### Memery cost
 We provide an ablation study on the memory cost between the occupancy grid map (OGM), Hilbert map, and our neural occupancy field (NOF). 
 
-| Maps type            | Approximate memory | Loc. method              | RMSE: location (cm) / yaw (degree)     |
-|----------------------|--------------------|--------------------------|----------------------------------------|
-| OGM (5cm grid size)  | 4.00MB             | AMCL<br>NMCL<br>SRRG-Loc | 11.11/4.15<br>19.57/3.62<br>8.74/1.68  |
-| OGM (10cm grid size) | 2.00MB             | AMCL<br>NMCL<br>SRRG-Loc | 15.01/4.18<br>36.27/4.04<br>12.15/1.53 |
-| Hilbert Map          | 0.01MB             | HMCL                     | 20.04/4.50                             |
-| NOF                  | 1.96NB             | IR-MCL                   | **6.62**/**1.11**                      |
+| Maps type             |  Approximate memory  |        Loc. method         |      RMSE: location (cm) / yaw (degree)      |
+|:----------------------|:--------------------:|:--------------------------:|:--------------------------------------------:|
+| OGM (5cm grid size)   |        4.00MB        |  AMCL<br>NMCL<br>SRRG-Loc  | 11.11 / 4.15<br>19.57 / 3.62<br>8.74 / 1.68  |
+| OGM (10cm grid size)  |        2.00MB        |  AMCL<br>NMCL<br>SRRG-Loc  | 15.01 / 4.18<br>36.27 / 4.04<br>12.15 / 1.53 |
+| Hilbert Map           |        0.01MB        |            HMCL            |                 20.04 / 4.50                 |
+| NOF                   |        1.96NB        |           IR-MCL           |             **6.62** / **1.11**              |
 
 
 ### Ablation study on fixed particle numbers
 We also provide the experiment to study the performance of global localization under the same particle numbers for all methods. We fixed the number of particles to 100,000. In the below table, all baselines and IR-MCL<sup>∗</sup> always use 100,000 particles. IR-MCL is shown for reference.
 
-| Method                                          | RMSE: location (cm) / yaw (degree)                                   |
-|-------------------------------------------------|----------------------------------------------------------------------|
-| AMCL<br>NMCL<br>HMCL<br>SRRG-Loc<br>IR-MCL<sup>∗</sup> | 11.56/4.12<br>19.57/3.62<br>20.54/4.70<br>8.74/1.68<br>6.71/**1.11** |
-| IR-MCL                                          | **6.62**/**1.11**                                                    |
+|                         Method                          |                       RMSE: location (cm) / yaw (degree)                       |
+|:-------------------------------------------------------:|:------------------------------------------------------------------------------:|
+| AMCL<br>NMCL<br>HMCL<br>SRRG-Loc<br>IR-MCL<sup>∗</sup>  | 11.56 / 4.12<br>19.57 / 3.62<br>20.54 / 4.70<br>8.74 / 1.68<br>6.71 / **1.11** |
+|                         IR-MCL                          |                              **6.62** / **1.11**                               |
 
 ## Citation
 

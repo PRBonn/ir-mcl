@@ -1,4 +1,3 @@
-cd ~/ir-mcl
 python train.py \
   --root_dir ./data/mit --N_samples 1024 --perturb 1 --noise_std 0 --L_pos 10 \
   --feature_size 256 --use_skip --seed 42 --batch_size 512 --chunk 262144 \
