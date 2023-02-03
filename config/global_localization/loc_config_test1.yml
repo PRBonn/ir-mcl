@@ -1,0 +1,65 @@
+# Configuration for Range-image-based Monte Carlo Localization
+
+# Inputs
+# Mesh map file
+map_file: 'data/ipblab/occmap.npy'
+map_res: 0.05
+# poses used to build the map
+map_pose_file: 'data/ipblab/loc_test/test1/seq_1.json'
+# ground truth poses file
+data_file: 'data/ipblab/loc_test/test1/seq_1.json'
+# downsample beams:
+max_beams: 32
+# Transformation from LiDAR to Robot
+T_b2l: 'data/ipblab/loc_test/b2l.txt'
+# the size of map: [min_x, max_x, min_y, max_y]
+map_size: [-15, 17.5, -12.5, 5]
+
+# Evaluation
+gt_file: 'data/ipblab/loc_test/test1/seq_1_gt_pose.txt'
+
+# Output
+# path to save localization results
+result_path: 'results/ipblab/loc_test/test1/loc_results.npz'
+# plot the final localization results
+plot_loc_results: True
+
+
+sensor_model: 'nog'
+# NOF parameters
+L_pos: 10
+feature_size: 256
+use_skip: True
+N_samples: 256
+chunk: 266496  # 1041*256
+use_disp: False
+ckpt_path: 'config/ipblab_nof_weights.ckpt'
+# NOG
+nog_size: [-50, 50, -50, 50]
+nog_res: 0.05
+
+# MCL parameters
+# odometry noisy coefficient
+r1_noisy: 0.01
+d_noisy: 0.01
+r2_noisy: 0.01
+# motion model noisy coefficient
+alpha: [0.01, 0.01, 0.05, 0.05]
+# pose tracking or global localization
+pose_tracking: false
+init_noise: [0.25, 0.25, 0.0685]
+# start frame index
+start_idx: 0
+# resolution of grid still in use for initialization
+grid_res: 1
+# number of particles
+numParticles: 100000
+# when the number of occupied tile map is smaller than the threshold,
+# we say the localization converged.
+converge_thres: 2
+# after convergence, we reduce the number of particles
+# and using only num_reduced particles.
+num_reduced: 5000
+# visualize the localization results online
+visualize: false
+
