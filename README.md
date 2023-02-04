@@ -84,7 +84,7 @@ The pre-trained weights are stored at `config` folder, includes:
 ## Run Experiments
 
 ### Global Localization Experiments on IPBLab dataset
-- Pre-training NOF on IPBLab dataset
+- Pre-training NOF on IPBLab dataset (**The train/eval/test set of IPBLab dataset are not available now, they will be released after our dataset paper is published!**)
   ```shell
   cd ~/ir-mcl
   bash ./shells/pretraining/ipblab.sh
