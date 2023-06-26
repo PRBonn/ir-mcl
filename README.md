@@ -63,9 +63,15 @@ The code was tested with Ubuntu 20.04 with:
   ```
 
 - Compile the motion model and resampling module
+  - Compile the source code:
   ```shell
-  cd ir-mcl/mcl & conda activate ir-mcl
+  cd ir-mcl/mcl & conda activate irmcl
   make -j4
+  ```
+  - Run the simple Test program:
+  ```shell
+  cd ir-mcl & conda activate irmcl
+  python ./mcl/srrg_utils/test_srrg.py
   ```
 
 ## Preparation
